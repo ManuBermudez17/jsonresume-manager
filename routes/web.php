@@ -23,6 +23,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+<<<<<<< HEAD
 Route::get('/resumes/create', [ResumeController::class, 'create'])->name('resumes.create');
 Route::get('/resumes/{resume}', [ResumeController::class, 'show'])->name('resumes.show');
 Route::put('/resumes/{resume}', [ResumeController::class, 'update'])->name('resumes.update');
@@ -30,3 +31,6 @@ Route::delete('/resumes/{resume}', [ResumeController::class, 'destroy'])->name('
 Route::get('/resumes/{resume}/edit', [ResumeController::class, 'edit'])->name('resumes.edit');
 Route::get('/resumes', [ResumeController::class, 'index'])->name('resumes.index');
 Route::post('/resumes', [ResumeController::class, 'store'])->name('resumes.store');
+=======
+Route::resource('resumes', ResumeController::class);
+>>>>>>> startpoint

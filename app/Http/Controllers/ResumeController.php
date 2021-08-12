@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\Models\Resume;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -26,11 +27,23 @@ class ResumeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+=======
+use Illuminate\Http\Request;
+
+class ResumeController extends Controller
+{
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+>>>>>>> startpoint
     public function create()
     {
         return view('resumes.create');
     }
 
+<<<<<<< HEAD
     /**
      * Store a newly created resource in storage.
      *
@@ -137,5 +150,9 @@ class ResumeController extends Controller
             'type' => 'danger',
             'message' => "Resume $resume->title deleted",
         ]);
+=======
+    public function store(Request $request)
+    {
+>>>>>>> startpoint
     }
 }

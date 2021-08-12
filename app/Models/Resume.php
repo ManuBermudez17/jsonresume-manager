@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Resume extends Model
 {
     use HasFactory;
+<<<<<<< HEAD
 
     protected $guarded = [
         'id',
@@ -18,4 +19,6 @@ class Resume extends Model
     public function user() {
         return $this->belongsTo(User::class);
     }
+=======
+>>>>>>> startpoint
 }
